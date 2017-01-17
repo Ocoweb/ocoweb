@@ -1,0 +1,185 @@
+-gallery_images = [{name:"Paquete 1",description:"Página con 4 secciones, Slider, Dominio, Formulario de Contacto, Mapa de ubicación. Desde $3000",image:"foto1.jpg"},{name:"Paquete 2",description:"Página con 8 secciones, Slider, Dominio, Formulario de Contacto, Mapa de ubicación. Desde $3000" ,image:"foto2.jpg"},{name:"Paquete 3",description:"Página con 4 secciones, Slider, Dominio, Formulario de Contacto, Mapa de ubicación. Desde $3000",image:"foto3.jpg"}] 
+-menu = [{title:"Inicio",link:"#home"},{title:"Servicios",link:"#menu"},{title:"Paquetes",link:"#gallery"},{title:"Contacto",link:"#contact"}]
+
+!!!5
+%html{class:"no-js", lang:"es"}
+	%head 
+		%meta{charset:"utf-8"}
+		%title 
+		%meta{name:"description", content:"Desarrollo de páginas y sistemas web en Ocotlán. Excelente calidad y precios accesibles."}
+		%link{rel:"stylesheet", href:"css/normalize.css"}
+		%link{rel:"stylesheet", href:"css/bootstrap.css"}
+		%link{rel:"stylesheet", href:"https://cdn.jsdelivr.net/flexboxgrid/6.3.0/flexboxgrid.min.css"}
+		%link{href:"http://cdn.materialdesignicons.com/1.7.22/css/materialdesignicons.min.css", rel:"stylesheet"}
+		%link{rel:"stylesheet", href:"https://fonts.googleapis.com/icon?family=Material+Icons"}
+		%link{href:"https://fonts.googleapis.com/css?family=Roboto",rel:"stylesheet"}
+		%link{rel:"stylesheet", href:"css/animate.css"}
+		%link{rel:"stylesheet", href:"css/style.css"}
+		%meta{name:"viewport", content:"width=device-width, initial-scale=1"}
+		%script{src:"js/vendor/modernizr-2.8.3.min.js"}
+	%body
+		="<!--[if lt IE 9]>"
+		%p{class:"browserupgrade"}
+			Estás usando un navegador
+			%strong desactualizado
+			%a{href:"http://browsehappy.com/"}
+			actualiza tu navegador para una mejor experiencia.
+		="<![endif]-->"
+		
+		.video-container
+			%video{autoplay:true, loop:true,width:"1280", height:"720", poster:"videos/img/coding.jpg"}
+				%source{src:"videos/mp4/coding.mp4", type:"video/mp4"}
+				%source{src:"videos/webm/coding.webm", type:"video/webm"}
+
+		.row.full-height.middle-xs.center-xs.relative.up#home{style:"background-image:url(img/video-background.png);background-repeat:repeat;"}
+			.col-xs-12.overflow-x
+				.box
+					%img.delay-1.animated.fadeIn{src:"img/logo.png",width:"350"}
+					%h1.white-text.roboto.title.no-margin.delay-2.animated.fadeInRight Diseño de Páginas Web en Ocotlán
+					%p.white-text.roboto.subtitle.no-margin.delay-2.animated.fadeInLeft Precios Accesibles y Excelente Calidad
+			%nav.fixed.white-text#navigation{style:"z-index:100;"}
+				.outer-menu
+					%input.checkbox-toggle{type:"checkbox"}
+					.hamburger
+						%div
+					.menu
+						%div
+							%div#display-block
+								.container
+									.row
+										.col-xs-12
+											%img.delay-1.animated.fadeIn{src:"img/logo.png",width:"300"}
+											%p.white-text.roboto.subtitle.no-margin Diseño de Páginas Web en Ocotlán
+								%ul.list-inline
+									-menu.each do |item|
+										%li
+											%a{href:item[:link]}= item[:title]
+		
+				
+			
+			.absolute.black.large-padding.white-text.full-width#description
+				.row.middle-xs.center-xs
+					.col-xs-7.col-sm-6.white-text.medium#title
+						Páginas Web Profesionales a Precios Accesibles
+					.col-xs.hidden#sticky-navigation
+						.box
+							%nav.text-right.navigation#responsive-nav	
+								%i.mdi.mdi-menu.white-text.title.mdi-close#menu-opener 							
+								%ul.list-inline
+									-menu.each do |item|
+										%li
+											%a.menu-link{href:item[:link]}= item[:title]
+			
+					
+		.text-center.relative#menu
+			.absolute.black#menu-title
+				%h2.roboto.title.white-text Nuestros Servicios
+			-menu_photos = [{name:"Páginas Web",description:"Nosotros creamos tu página web autoadministrable para mostrar productos o información acerca de tu negocio.",image:"paginas"},{name:"Adaptabilidad a Móviles",description:"Hoy en día es indispensable que una página web se pueda ver sin problemas en dispositivos móviles",image:"responsive"},{name:"Tiendas en Línea",description:"¿Quieres vender por Internet? Nosotros creamos tu Tienda en Linea (E-commerce)",image:"ecommerce"},{name:"Mapa de Ubicación",description:"Muestra a tus clientes dónde estás ubicado con los mapas de Google y diles cómo llegar",image:"maps"},{name:"Redes Sociales",description:"Vincula tus redes sociales para llegar a más seguidores en Facebook, Twitter, Instagram,etc.",image:"social"},{name:"Dominios",description:"Obten tu dominio .com o .com.mx junto con tu página web ",image:"domain"},{name:"Rediseño y Modificación",description:"¿Ya tienes un sitio pero está desactualizado? Nosotros lo rediseñamos o modificamos a tu gusto.",image:"modified"},{name:"Posicionamiento Web",description:"Damos de alta tu página para que aparesca en Google",image:"seo"}]
+			.row
+				-menu_photos.each do |photo|
+					.col-md-4.col-lg-3.col-sm-6.col-xs-12.services{style:"background-image: url(img/services/#{photo[:image]}-thumb.jpg)"}
+						.screen
+							.row.middle-xs.full-height
+								.col-xs-12
+									%h3.roboto.white-text.thumb-text= photo[:name]
+									%p.white-text.small= photo[:description]
+		
+		#gallery
+			.inner{style:"background-image: url(img/bg.png);"}
+				.row.center-xs.middle-xs
+					.col-xs-10.col-sm-4.col-md-3
+						.pricing-wrapper.clearfix
+						.pricing-table
+							%h3.pricing-title Paquete 1
+							.price
+								%sup Desde
+								$3000
+								%sub MXN
+							-packs = ["Landing Page", "Dominio Incluido","Slider o Video-Background","Formulario de Contacto", "Google Maps", "Redes Sociales"]
+							%ul.table-list
+								-packs.each do |item|
+									%li
+										%i.material-icons.red-table-color check_box
+										%strong= item
+							.table-buy
+								%p.pricing-action Obtenlo Ahora
+
+					.col-xs-10.col-sm-4.col-md-3
+						.pricing-wrapper.clearfix
+						.pricing-table.recommended.table-up
+							%h3.pricing-title Paquete 3
+							.price
+								%sup Desde
+								$9000
+								%sub MXN
+							-packs = ["Tienda en Linea", "Dominio Incluido","Autoadministrable","Distintas Formas de Pago", "Cupones", "Adaptabilidad a Moviles"]
+							%ul.table-list
+								-packs.each do |item|
+									%li
+										%i.material-icons.blue-table-color check_box
+										%strong= item
+							.table-buy
+								%p.pricing-action Obtenlo Ahora
+
+					.col-xs-10.col-sm-4.col-md-3
+						.pricing-wrapper.clearfix
+						.pricing-table
+							%h3.pricing-title Paquete 2
+							.price
+								%sup Desde
+								$4500
+								%sub MXN
+							-packs = ["Página Web", "Dominio Incluido","Panel de Control","Formulario de Contacto", "Google Maps", "Redes Sociales"]
+							%ul.table-list
+								-packs.each do |item|
+									%li
+										%i.material-icons.red-table-color check_box
+										%strong= item
+							.table-buy
+								%p.pricing-action Obtenlo Ahora
+		.container
+			.card.white.black-text.text-center.relative
+				%h3.medium.slim
+					%strong.roboto.medium ¿Te interesa alguno de nuestros paquetes o quieres cotizar un proyecto?
+					%h3.top-space No dudes en contactarnos en la parte de abajo o en nuestras Redes Sociales.
+		
+
+		.black.white-text.full-height#contact
+			.row.middle-xs.full-height
+				.col-xs-12
+					.box
+						%p.text-center.medium#info-contact Presiona Enter para llenar el Formulario y enviarnos un correo.
+						%form{action:"https://formspree.io/ep.luisjesus@gmail.com", method:"POST",id:"contact-form",class:"step-form"}
+							.row.center-xs
+								.col-xs-12.col-sm-2.col-md-1.first-sm
+									.box
+										-3.times do |i|
+											-if i == 0
+												.path-step.active
+											-else
+												.path-step
+								.col-xs-12.col-sm-3.first-xs
+									.box
+										%fieldset.step.active
+											%input{type:"email",name:"email",placeholder:"Tu Correo Electrónico",class:"input", required:true}
+										%fieldset.step
+											%input{type:"text",name:"name",placeholder:"Tu Nombre",class:"input", required:true}
+										%fieldset.step
+											%textarea{name:"body",placeholder:"Tu Mensaje",class:"input", required:true}
+		.be-black.large-padding.white-text.full-width
+			.row.middle-xs.center-xs
+				.col-xs-7.col-sm-6.white-text.medium#title
+					Ocoweb, Diseño de Páginas Web en Ocotlán 2017
+										
+			
+		%script{src:"http://code.jquery.com/jquery-3.1.1.min.js", integrity:"sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=", crossorigin:"anonymous"}
+		%script
+			window.jQuery || document.write("<script src='js/vendor/jquery-1.12.0.min.js'><\/script>")
+		:javascript
+			function openNav(){
+				document.getElementById("myNav").style.height= "100%";
+			}
+			function closeNav(){
+				document.getElementById("myNav").style.height= "0%";
+			}
+		%script{src:"dist/app.js"}
