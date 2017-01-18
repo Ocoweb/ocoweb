@@ -6,6 +6,10 @@
 /* ==========================================================================
    Base styles: opinionated defaults
    ========================================================================== */
+<<<<<<< HEAD
+=======
+@import url("https://fonts.googleapis.com/css?family=Pacifico|Open+Sans:300");
+>>>>>>> 4e91e7e766a084b1a1c3fd07ece60319e555ca21
 html {
   color: #222;
   font-size: 1em;
