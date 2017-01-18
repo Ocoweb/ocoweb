@@ -1,5 +1,5 @@
 -gallery_images = [{name:"Paquete 1",description:"Página con 4 secciones, Slider, Dominio, Formulario de Contacto, Mapa de ubicación. Desde $3000",image:"foto1.jpg"},{name:"Paquete 2",description:"Página con 8 secciones, Slider, Dominio, Formulario de Contacto, Mapa de ubicación. Desde $3000" ,image:"foto2.jpg"},{name:"Paquete 3",description:"Página con 4 secciones, Slider, Dominio, Formulario de Contacto, Mapa de ubicación. Desde $3000",image:"foto3.jpg"}] 
--menu = [{title:"Inicio",link:"#home"},{title:"Servicios",link:"#menu"},{title:"Paquetes",link:"#gallery"},{title:"Contacto",link:"#contact"}]
+-menu = [{title:"Inicio",link:""},{title:"Servicios",link:"#menu"},{title:"Paquetes",link:"#gallery"},{title:"Contacto",link:"#contact"}]
 
 !!!5
 %html{class:"no-js", lang:"es"}
@@ -10,7 +10,7 @@
 		%link{rel:"stylesheet", href:"css/normalize.css"}
 		%link{rel:"stylesheet", href:"css/bootstrap.css"}
 		%link{rel:"stylesheet", href:"https://cdn.jsdelivr.net/flexboxgrid/6.3.0/flexboxgrid.min.css"}
-		%link{href:"http://cdn.materialdesignicons.com/1.7.22/css/materialdesignicons.min.css", rel:"stylesheet"}
+		%link{href:"https://cdn.materialdesignicons.com/1.7.22/css/materialdesignicons.min.css", rel:"stylesheet"}
 		%link{rel:"stylesheet", href:"https://fonts.googleapis.com/icon?family=Material+Icons"}
 		%link{href:"https://fonts.googleapis.com/css?family=Roboto",rel:"stylesheet"}
 		%link{rel:"stylesheet", href:"css/animate.css"}
@@ -37,24 +37,19 @@
 					%img.delay-1.animated.fadeIn{src:"img/logo.png",width:"350"}
 					%h1.white-text.roboto.title.no-margin.delay-2.animated.fadeInRight Diseño de Páginas Web en Ocotlán
 					%p.white-text.roboto.subtitle.no-margin.delay-2.animated.fadeInLeft Precios Accesibles y Excelente Calidad
-			%nav.fixed.white-text#navigation{style:"z-index:100;"}
-				.outer-menu
-					%input.checkbox-toggle{type:"checkbox"}
-					.hamburger
-						%div
-					.menu
-						%div
-							%div#display-block
-								.container
-									.row
-										.col-xs-12
-											%img.delay-1.animated.fadeIn{src:"img/logo.png",width:"300"}
-											%p.white-text.roboto.subtitle.no-margin Diseño de Páginas Web en Ocotlán
-								%ul.list-inline
-									-menu.each do |item|
-										%li
-											%a{href:item[:link]}= item[:title]
-		
+			.menu-collapsed.fixed#navigation
+				.bar
+				%nav
+					%ul
+						.container
+						.row
+							.col-xs-12
+								%img{src:"img/logo.png",width:"250"}
+								%p.roboto.subtitle.white-text.no-margin Diseño de Paginas Web en Ocotlán
+						-menu.each do |item|
+							%li
+								%a.menu-link{href:item[:link]}= item[:title]
+
 				
 			
 			.absolute.black.large-padding.white-text.full-width#description
@@ -62,7 +57,7 @@
 					.col-xs-7.col-sm-6.white-text.medium#title
 						Páginas Web Profesionales a Precios Accesibles
 					.col-xs.hidden#sticky-navigation
-						.box
+						.box-
 							%nav.text-right.navigation#responsive-nav	
 								%i.mdi.mdi-menu.white-text.title.mdi-close#menu-opener 							
 								%ul.list-inline
@@ -83,9 +78,58 @@
 								.col-xs-12
 									%h3.roboto.white-text.thumb-text= photo[:name]
 									%p.white-text.small= photo[:description]
+		.container.bootstrap.snippet.black-text#bg-customers
+			%h2.middle-xs.text-center.text-primary ¿Qué dicen nuestros clientes?
+			%br
+			%br
+			.row
+				%hr
+				.col-md-10.col-md-offset-1
+					.row.testimonials
+						.col-xs-12.col-sm-4
+							%blockquote
+								%p.clients-words Muy buena compañia y muy buenos diseños, además de sus excelentes precios
+								%span.clients-name.text-primary — ZSPORTV
+								%img.img-circle.img-thumbnail{:src => "https://scontent-dft4-2.xx.fbcdn.net/v/t1.0-9/15027473_1872520156304533_8377741706381132852_n.jpg?oh=3291ae2c1ba2f621d5a17db4f43a362f&oe=591D759D",:width => "150"}
+						.col-xs-12.col-sm-4
+							%blockquote
+								%p.clients-words Muy satisfecho con el trabajo que hicieron, sigan así!!
+								%span.clients-name.text-primary — Angel García
+								%img.img-circle.img-thumbnail{:src => "https://scontent-dft4-2.xx.fbcdn.net/v/t1.0-9/13592550_1064833326899158_2098256707936554500_n.jpg?oh=139a0736298cbcd371e70c5c5b74f65b&oe=5924A3A5",:width => "150"}
+						.col-xs-12.col-sm-4
+							%blockquote
+								%p.clients-words ¡¡Por fin pude tener una página para mi negocio!! Muchas Gracias Ocoweb
+								%span.clients-name.text-primary — Carlos Camara
+								%img.img-circle.img-thumbnail{:src => "https://scontent-dft4-2.xx.fbcdn.net/v/t1.0-9/15941175_1311271658932000_6923999145961243940_n.jpg?oh=74b1bd2c1c49d5b31631b637320f80c0&oe=591B6C7A",:width => "150"}
+					%hr
 		
+		.container-fluid.text-center.black-text#bg-port
+			%h2.middle-xs.text-center.text-primary Nuestro Portafolio
+			%br
+			%h3.middle-xs.text-center.text-primary.title ¿Qué hemos creado?
+			%br
+			.row.text-center
+				.col-xs-12.col-sm-4
+					.thumbnail
+						%img{:alt => "ZSPORTV", :height => "200", :src => "img/services/zsportv.jpg", :width => "400"}
+						%p
+							%strong ZSPORTV
+						%p.medium Una página de noticias sobre futbol y otros deportes.
+				.col-xs-12.col-sm-4
+					.thumbnail
+						%img{:alt => "Tienda en Linea", :height => "200", :src => "img/services/tienda.png", :width => "400"}
+						%p
+							%strong Tienda en Línea
+						%p.medium ¡¡También creamos Tiendas en Linea para tu negocio!!
+				.col-xs-12.col-sm-4
+					.thumbnail
+						%img{:alt => "San Francisco", :height => "100", :src => "img/services/foto3.jpg", :width => "350"}
+						%p
+							%strong Tecnologías
+						%p.medium Usamos Tecnologías actuales para  una mejor experiencia para nuestros clientes.
 		#gallery
-			.inner{style:"background-image: url(img/bg.png);"}
+			.inner
+				%h2.middle-xs.text-center.text-primary.title ¡¡Tenemos algunos paquetes para ti!!
 				.row.center-xs.middle-xs
 					.col-xs-10.col-sm-4.col-md-3
 						.pricing-wrapper.clearfix
@@ -129,7 +173,7 @@
 								%sup Desde
 								$4500
 								%sub MXN
-							-packs = ["Página Web", "Dominio Incluido","Panel de Control","Formulario de Contacto", "Google Maps", "Redes Sociales"]
+							-packs = ["Página Web", "Dominio Incluido","Panel de Control","Diseño Personalizado", "Cuentas de Correo", "Adaptable a Moviles"]
 							%ul.table-list
 								-packs.each do |item|
 									%li
@@ -166,13 +210,13 @@
 											%input{type:"text",name:"name",placeholder:"Tu Nombre",class:"input", required:true}
 										%fieldset.step
 											%textarea{name:"body",placeholder:"Tu Mensaje",class:"input", required:true}
-		.be-black.large-padding.white-text.full-width
+		.be-black.large-padding.white-text.full-width.no-margin{style:"background-color:#000;"}
 			.row.middle-xs.center-xs
 				.col-xs-7.col-sm-6.white-text.medium#title
 					Ocoweb, Diseño de Páginas Web en Ocotlán 2017
 										
 			
-		%script{src:"http://code.jquery.com/jquery-3.1.1.min.js", integrity:"sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=", crossorigin:"anonymous"}
+		%script{src:"https://code.jquery.com/jquery-3.1.1.min.js", integrity:"sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=", crossorigin:"anonymous"}
 		%script
 			window.jQuery || document.write("<script src='js/vendor/jquery-1.12.0.min.js'><\/script>")
 		:javascript

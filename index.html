@@ -7,7 +7,7 @@
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/flexboxgrid/6.3.0/flexboxgrid.min.css" rel="stylesheet">
-    <link href="http://cdn.materialdesignicons.com/1.7.22/css/materialdesignicons.min.css" rel="stylesheet">
+    <link href="https://cdn.materialdesignicons.com/1.7.22/css/materialdesignicons.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link href="css/animate.css" rel="stylesheet">
@@ -38,54 +38,44 @@
           <p class="white-text roboto subtitle no-margin delay-2 animated fadeInLeft">Precios Accesibles y Excelente Calidad</p>
         </div>
       </div>
-      <nav class="fixed white-text" id="navigation" style="z-index:100;">
-        <div class="outer-menu">
-          <input class="checkbox-toggle" type="checkbox">
-          <div class="hamburger">
-            <div></div>
-          </div>
-          <div class="menu">
-            <div>
-              <div id="display-block">
-                <div class="container">
-                  <div class="row">
-                    <div class="col-xs-12">
-                      <img class="delay-1 animated fadeIn" src="img/logo.png" width="300">
-                      <p class="white-text roboto subtitle no-margin">Diseño de Páginas Web en Ocotlán</p>
-                    </div>
-                  </div>
-                </div>
-                <ul class="list-inline">
-                  <li>
-                    <a href="#home">Inicio</a>
-                  </li>
-                  <li>
-                    <a href="#menu">Servicios</a>
-                  </li>
-                  <li>
-                    <a href="#gallery">Paquetes</a>
-                  </li>
-                  <li>
-                    <a href="#contact">Contacto</a>
-                  </li>
-                </ul>
+      <div class="menu-collapsed fixed" id="navigation">
+        <div class="bar"></div>
+        <nav>
+          <ul>
+            <div class="container"></div>
+            <div class="row">
+              <div class="col-xs-12">
+                <img src="img/logo.png" width="250">
+                <p class="roboto subtitle white-text no-margin">Diseño de Paginas Web en Ocotlán</p>
               </div>
             </div>
-          </div>
-        </div>
-      </nav>
+            <li>
+              <a class="menu-link" href="">Inicio</a>
+            </li>
+            <li>
+              <a class="menu-link" href="#menu">Servicios</a>
+            </li>
+            <li>
+              <a class="menu-link" href="#gallery">Paquetes</a>
+            </li>
+            <li>
+              <a class="menu-link" href="#contact">Contacto</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
       <div class="absolute black large-padding white-text full-width" id="description">
         <div class="row middle-xs center-xs">
           <div class="col-xs-7 col-sm-6 white-text medium" id="title">
             Páginas Web Profesionales a Precios Accesibles
           </div>
           <div class="col-xs hidden" id="sticky-navigation">
-            <div class="box">
+            <div class="box-">
               <nav class="text-right navigation" id="responsive-nav">
                 <i class="mdi mdi-menu white-text title mdi-close" id="menu-opener"></i>
                 <ul class="list-inline">
                   <li>
-                    <a class="menu-link" href="#home">Inicio</a>
+                    <a class="menu-link" href="">Inicio</a>
                   </li>
                   <li>
                     <a class="menu-link" href="#menu">Servicios</a>
@@ -190,8 +180,78 @@
         </div>
       </div>
     </div>
+    <div class="container bootstrap snippet black-text" id="bg-customers">
+      <h2 class="middle-xs text-center text-primary">¿Qué dicen nuestros clientes?</h2>
+      <br>
+      <br>
+      <div class="row">
+        <hr>
+        <div class="col-md-10 col-md-offset-1">
+          <div class="row testimonials">
+            <div class="col-xs-12 col-sm-4">
+              <blockquote>
+                <p class="clients-words">Muy buena compañia y muy buenos diseños, además de sus excelentes precios</p>
+                <span class="clients-name text-primary">— ZSPORTV</span>
+                <img class="img-circle img-thumbnail" src="https://scontent-dft4-2.xx.fbcdn.net/v/t1.0-9/15027473_1872520156304533_8377741706381132852_n.jpg?oh=3291ae2c1ba2f621d5a17db4f43a362f&amp;oe=591D759D" width="150">
+              </blockquote>
+            </div>
+            <div class="col-xs-12 col-sm-4">
+              <blockquote>
+                <p class="clients-words">Muy satisfecho con el trabajo que hicieron, sigan así!!</p>
+                <span class="clients-name text-primary">— Angel García</span>
+                <img class="img-circle img-thumbnail" src="https://scontent-dft4-2.xx.fbcdn.net/v/t1.0-9/13592550_1064833326899158_2098256707936554500_n.jpg?oh=139a0736298cbcd371e70c5c5b74f65b&amp;oe=5924A3A5" width="150">
+              </blockquote>
+            </div>
+            <div class="col-xs-12 col-sm-4">
+              <blockquote>
+                <p class="clients-words">¡¡Por fin pude tener una página para mi negocio!! Muchas Gracias Ocoweb</p>
+                <span class="clients-name text-primary">— Carlos Camara</span>
+                <img class="img-circle img-thumbnail" src="https://scontent-dft4-2.xx.fbcdn.net/v/t1.0-9/15941175_1311271658932000_6923999145961243940_n.jpg?oh=74b1bd2c1c49d5b31631b637320f80c0&amp;oe=591B6C7A" width="150">
+              </blockquote>
+            </div>
+          </div>
+          <hr>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid text-center black-text" id="bg-port">
+      <h2 class="middle-xs text-center text-primary">Nuestro Portafolio</h2>
+      <br>
+      <h3 class="middle-xs text-center text-primary title">¿Qué hemos creado?</h3>
+      <br>
+      <div class="row text-center">
+        <div class="col-xs-12 col-sm-4">
+          <div class="thumbnail">
+            <img alt="ZSPORTV" height="200" src="img/services/zsportv.jpg" width="400">
+            <p>
+              <strong>ZSPORTV</strong>
+            </p>
+            <p class="medium">Una página de noticias sobre futbol y otros deportes.</p>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-4">
+          <div class="thumbnail">
+            <img alt="Tienda en Linea" height="200" src="img/services/tienda.png" width="400">
+            <p>
+              <strong>Tienda en Línea</strong>
+            </p>
+            <p class="medium">¡¡También creamos Tiendas en Linea para tu negocio!!</p>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-4">
+          <div class="thumbnail">
+            <img alt="San Francisco" height="100" src="img/services/foto3.jpg" width="350">
+            <p>
+              <strong>Tecnologías</strong>
+            </p>
+            <p class="medium">Usamos Tecnologías actuales para  una mejor experiencia para nuestros clientes.</p>
+          </div>
+        </div>
+      </div>
+    </div>
     <div id="gallery">
-      <div class="inner" style="background-image: url(img/bg.png);">
+      <div class="inner">
+        <h2 class="middle-xs text-center text-primary title">¡¡Tenemos algunos paquetes para ti!!</h2>
         <div class="row center-xs middle-xs">
           <div class="col-xs-10 col-sm-4 col-md-3">
             <div class="pricing-wrapper clearfix"></div>
@@ -297,15 +357,15 @@
                 </li>
                 <li>
                   <i class="material-icons red-table-color">check_box</i>
-                  <strong>Formulario de Contacto</strong>
+                  <strong>Diseño Personalizado</strong>
                 </li>
                 <li>
                   <i class="material-icons red-table-color">check_box</i>
-                  <strong>Google Maps</strong>
+                  <strong>Cuentas de Correo</strong>
                 </li>
                 <li>
                   <i class="material-icons red-table-color">check_box</i>
-                  <strong>Redes Sociales</strong>
+                  <strong>Adaptable a Moviles</strong>
                 </li>
               </ul>
               <div class="table-buy">
@@ -357,14 +417,14 @@
         </div>
       </div>
     </div>
-    <div class="be-black large-padding white-text full-width">
+    <div class="be-black large-padding white-text full-width no-margin" style="background-color:#000;">
       <div class="row middle-xs center-xs">
         <div class="col-xs-7 col-sm-6 white-text medium" id="title">
           Ocoweb, Diseño de Páginas Web en Ocotlán 2017
         </div>
       </div>
     </div>
-    <script crossorigin="anonymous" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" src="http://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script crossorigin="anonymous" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
     <script>
       window.jQuery || document.write("<script src='js/vendor/jquery-1.12.0.min.js'><\/script>")
     </script>
