@@ -7,9 +7,13 @@
    Base styles: opinionated defaults
    ========================================================================== */
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 @import url("https://fonts.googleapis.com/css?family=Pacifico|Open+Sans:300");
 >>>>>>> 4e91e7e766a084b1a1c3fd07ece60319e555ca21
+=======
+@import url("http://fonts.googleapis.com/css?family=Pacifico|Open+Sans:300");
+>>>>>>> parent of 4e91e7e... Update style.css
 html {
   color: #222;
   font-size: 1em;
