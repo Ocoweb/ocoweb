@@ -39,7 +39,11 @@
 					%p.white-text.roboto.subtitle.no-margin.delay-2.animated.fadeInLeft Precios Accesibles y Excelente Calidad
 			.menu-collapsed.fixed#navigation
 				.bar
-				
+				%nav
+					%ul
+						-menu.each do |item|
+							%li
+								%a.menu-link{href:item[:link]}= item[:title]
 
 				
 			
