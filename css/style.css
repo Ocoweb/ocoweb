@@ -39,7 +39,7 @@ hr {
   display: block;
   height: 1px;
   border: 0;
-  border-top: 1px solid #ccc;
+  border-top: 2px dashed #ccc;
   margin: 1em 0;
   padding: 0; }
 
@@ -223,7 +223,10 @@ fieldset {
     background-color: transparent;
     width: 100%; }
 
-#bg-customers, #bg-port, .container {
+#bg-customers {
+  background-color: transparent; }
+
+#bg-port, .container {
   background-color: transparent; }
 
 .b-a, .bar, .bar:before, .bar:after {
@@ -316,6 +319,16 @@ fieldset {
 
 .row-height {
   max-sheight: 350px; }
+
+.section-title {
+  font-size: 3em;
+  letter-spacing: 2px;
+  font-weight: 800;
+  margin-top: 2em; }
+
+.border-double {
+  border: 4px double #333;
+  padding: 5px 20px; }
 
 .medium, .navigation li {
   font-size: 1.5em; }
@@ -779,7 +792,7 @@ h3 {
     white-space: pre-wrap !important; }
   pre,
   blockquote {
-    border: 1px solid #999;
+    border: 1px solid #999 dashed;
     page-break-inside: avoid; }
   /*
      * Printing Tables:
